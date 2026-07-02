@@ -542,3 +542,16 @@ odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
 # Touch - OnePlus 15 hbp5 variant; conflicts with tablets' own touch service (same AIDL instance)
 odm/bin/hw/vendor-oplus-hardware-touch-V2-hbp5-service
 odm/etc/init/vendor-oplus-hardware-touch-V2-hbp5-service.rc
+
+# Phone-only leaks gated off tablets (v8 vendor audit): absent from Pad 4 firmware.
+# qmipriod = modem QMI property daemon (WiFi-only tablet has no modem);
+# libsystem_health_mon2 only consumed by phone-gated telephony (libqcrilNr); wind_filter
+# = phone audio model; qsh_camera *sm8845* = phone camera sensor configs (tablet is sm8850).
+vendor/bin/qmipriod
+vendor/etc/init/qmipriod.rc
+vendor/etc/init/qmipriod.debug.rc
+vendor/lib64/libqmiextservices.so
+vendor/lib64/libsystem_health_mon2.so
+vendor/etc/acdbdata/wnr_models/wind_filter__1.0__48k__2ch__16b__eai_5.5.eai
+vendor/etc/sensors/config/qsh_camera_common_sm8845.json
+vendor/etc/sensors/config/qsh_camera_ov32c4c_4_sm8845.json

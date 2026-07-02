@@ -9,7 +9,6 @@ vendor/etc/acdbdata/haptics_data/tuning_data/haptics_vi_tuning_0_cdp.bin
 vendor/etc/acdbdata/haptics_data/tuning_data/haptics_vi_tuning_0_mtp.bin
 vendor/etc/acdbdata/haptics_data/tuning_data/haptics_vi_tuning_0_qrd.bin
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_5.6.0_enpuv6.pmd
-vendor/etc/acdbdata/wnr_models/wind_filter__1.0__48k__2ch__16b__eai_5.5.eai
 
 # ADSP
 vendor/bin/adsprpcd
@@ -208,6 +207,7 @@ vendor/lib64/hw/vendor.qti.hardware.bluetooth.finder-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@aidl-impl.so
 vendor/lib64/hw/vendor.qti.hardware.fm-impl.so
 vendor/lib64/btaudio_offload_if.so
+vendor/lib64/vendor.oplus.hardware.a2dp_offload-V1-ndk.so
 vendor/lib64/libbluetooth_audio_session_aidl_qti.so
 vendor/lib64/libbluetooth_audio_session_qti.so
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so
@@ -852,12 +852,9 @@ vendor/lib64/vendor.qti.qesdsys-V4-ndk.so
 # QMI
 system/etc/sysconfig/qti_whitelist.xml
 vendor/bin/irsc_util
-vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
-vendor/etc/init/qmipriod.debug.rc
-vendor/etc/init/qmipriod.rc
 vendor/etc/init/vendor.qti.smp2p.rc
 vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/lib64/libidl.so
@@ -872,7 +869,6 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmi_legacy.so
-vendor/lib64/libqmiextservices.so
 vendor/lib64/libqmiservices.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
@@ -1023,6 +1019,7 @@ vendor/lib64/libsnsutils.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/libsuidlookup.so
 vendor/lib64/sensors.qsh.so
+vendor/lib64/liboplus_sensor_stats.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate-V1-ndk.so
 
 # Sensors config
@@ -1084,7 +1081,6 @@ vendor/etc/sensors/config/molokai_vertigo_mmc56x3x_0.json
 vendor/etc/sensors/config/oplus_camera_aon.json
 vendor/etc/sensors/config/qsh_ble.json
 vendor/etc/sensors/config/qsh_camera_common.json
-vendor/etc/sensors/config/qsh_camera_common_sm8845.json
 vendor/etc/sensors/config/qsh_camera_fairladyExfront_3.json
 vendor/etc/sensors/config/qsh_camera_fairladyfront_3.json
 vendor/etc/sensors/config/qsh_camera_imx688_6.json
@@ -1095,7 +1091,6 @@ vendor/etc/sensors/config/qsh_camera_lighthousefront_1.json
 vendor/etc/sensors/config/qsh_camera_macanExFront_4.json
 vendor/etc/sensors/config/qsh_camera_macanFront_4.json
 vendor/etc/sensors/config/qsh_camera_ov32c4c_4.json
-vendor/etc/sensors/config/qsh_camera_ov32c4c_4_sm8845.json
 vendor/etc/sensors/config/qsh_camera_s5kjn5_3.json
 vendor/etc/sensors/config/qsh_camera_s5kjn5_3_actuator.json
 vendor/etc/sensors/config/qsh_camera_swangoosefrontmain_3.json
@@ -1160,7 +1155,6 @@ vendor/bin/vendor.qti.syshealthmon-service
 vendor/etc/init/vendor.qti.syshealthmon-service.rc
 vendor/etc/seccomp_policy/syshealthmon.policy
 vendor/etc/vintf/manifest/vendor.qti.syshealthmon-service.xml
-vendor/lib64/libsystem_health_mon2.so
 vendor/lib64/vendor.qti.syshealthmon-V1-ndk.so
 
 # TFTP
