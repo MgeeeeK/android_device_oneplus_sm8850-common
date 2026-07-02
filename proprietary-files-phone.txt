@@ -533,3 +533,12 @@ vendor/etc/init/vendor.qti.hardware.soter-service.rc
 vendor/etc/vintf/manifest/vendor.qti.hardware.soter-service.xml
 vendor/lib64/hw/vendor.qti.hardware.soter-impl.so
 vendor/lib64/vendor.qti.hardware.soter-V1-ndk.so
+
+# OPLUS Charger - OnePlus 15 variant; conflicts with tablets' own charger-V11 service
+odm/bin/hw/vendor.oplus.hardware.charger-V10-service
+odm/etc/init/vendor.oplus.hardware.charger-V10-service.rc
+odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
+
+# Touch - OnePlus 15 hbp5 variant; conflicts with tablets' own touch service (same AIDL instance)
+odm/bin/hw/vendor-oplus-hardware-touch-V2-hbp5-service
+odm/etc/init/vendor-oplus-hardware-touch-V2-hbp5-service.rc
